@@ -9,10 +9,16 @@ import { ItemTypes } from '../ItemTypes'
 import parse from 'html-react-parser';
 import styles from './Action.module.css'
 
+interface Props {
+    action: any,
+    type: string,
+
+    removeAction: any
+
+}
 
 
-
-const Action = ({action, type, itemType, removeAction}) => {
+const Action= ({action, type, removeAction}:Props) => {
     const [actionInfo, setActionInfo] = useState({});
     const [{isDragging}, drag] = useDrag({
         type: ItemTypes.ACTION,

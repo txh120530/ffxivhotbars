@@ -35,6 +35,7 @@ const Row = ({slots, index, role}) => {
           <span>{index+1}</span>
 
           <Select 
+            id={`modifier-select-${index}`} instanceId={`modifier-select-${index}`}
             options={modifierOptions} 
             className="w-5/12" 
             classNamePrefix="react-select"
@@ -45,7 +46,7 @@ const Row = ({slots, index, role}) => {
 
     <ol  className={styles.row}>
       {Object.keys(slots).map((slot, index) => ( 
-        <li className={styles.slot} key={`slot-${slots[slot].id}`}>
+        <li className={styles.slot} key={`slot-${slots[slot]}-${index}`}>
           <HotBarSlot
             id={slots[slot].id}
             index={index}
@@ -69,12 +70,10 @@ const HotBar = ({role}) => {
     return (
         <ol className={styles['row-container']}>
         {Object.keys(hotbar).map((barKey, index) => (
-          <>
-          <li key={barKey}  className={styles.rowBlock}>
+          <li key={`${barKey}-${index}`}  className={styles.rowBlock}>
             
             <Row slots={hotbar[barKey]} index={index} role={role}/>
           </li>
-          </>
         ))}
       </ol>
     );
