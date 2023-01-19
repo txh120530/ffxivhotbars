@@ -12,7 +12,7 @@ const SideMenu = ({jobActions, generalActions}) => {
         <div label="Job Actions" preopenTab="1">
         {jobActions.map(function(jobAction, i){
             return (
-                <Action action={jobAction} type="Action" />
+                <Action action={jobAction} key={`job-action-${i}`} type="Action" />
             )
         })}
         </div>
@@ -21,7 +21,7 @@ const SideMenu = ({jobActions, generalActions}) => {
         {generalActions.map(function(generalAction, i){
             if(generalAction.Name){
                 return (
-                    <Action action={generalAction} type="GeneralAction" itemType={ItemTypes.ACTION} />
+                    <Action action={generalAction} key={`general-action-${i}`} type="GeneralAction" itemType={ItemTypes.ACTION} />
                 )
             }
         })}
