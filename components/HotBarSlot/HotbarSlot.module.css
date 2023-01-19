@@ -1,0 +1,8 @@
+.hotbarNum{
+    font-weight: 900;
+    color: #fff;
+    font-size: .6rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,47 @@
+.slantBtnContainer{
+    display: flex;
+}
+
+.slantBtn{
+    padding: .3rem 2rem;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    background: linear-gradient(180deg, rgba(107,77,67,1) 0%, rgba(74,56,33,1) 45%, rgba(63,47,34,1) 50%, rgba(41,28,18,1) 55%, rgba(49,32,18,1) 100%);
+    color: white; 
+    display: block;
+    transform: skew(-14deg);
+    clip-path: polygon(10% 0, 95% 0, 100% 20%, 90% 100%, 5% 100%, 0 80%);
+    font-weight: bold;
+    position: relative;
+    opacity: .5;
+    transition: .3s;
+  }
+
+  .slantBtn::after{
+    content: '';
+    width: 10px;
+    height: 4px;
+    position: absolute;
+    transform: rotate(37deg);
+    bottom: 5px;
+    left: 5px;
+    box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.75);
+    background: linear-gradient(90deg, rgba(88,69,50,1) 0%, rgba(132,113,97,1) 100%);
+
+
+  }
+
+.slantBtn >div {
+    display: block;
+    transform: skew(14deg);
+    pointer-events: none;;
+}
+
+.slantBtn.active{
+    opacity: 1;
+}
+
+.slantBtn.active::after{
+    background: #fffb52;
+}

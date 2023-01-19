@@ -1,0 +1,33 @@
+.slot{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    
+    gap: 10px;
+}
+
+.slot + .slot {
+    margin-left: 20px;
+}
+
+
+
+.slot >div:nth-of-type(1) { grid-area: 2 / 1 / 4 / 2; }
+.slot >div:nth-of-type(2) { grid-area: 1 / 2 / 3 / 3; }
+.slot >div:nth-of-type(3) { grid-area: 3 / 2 / 5 / 3; }
+.slot >div:nth-of-type(4) { grid-area: 2 / 3 / 4 / 4; }
+
+.slot > div{
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.35);
+    border: 1px ridge  rgba(0, 0, 0, 0.35);
+    background: linear-gradient(132deg, rgba(47,47,37,1) 0%, rgba(74,74,64,1) 100%);
+    position: relative;
+}
+
+.react-select__control{
+    background-color: #f7d7b5 !important;
+    
+}
