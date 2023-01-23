@@ -40,7 +40,7 @@ const Row = ({slots, index, role}) => {
             groupIndex={index}
             rowIndex={rowIndex}
             role={role}
-            modifier={null} index={undefined}          />
+            modifier={null}          />
         </div>
       ))}
     </ol>
