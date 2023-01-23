@@ -52,7 +52,7 @@ const Row = ({slots, index, role}) => {
             index={index}
             modifier={modifier}
             role={role}
-            storageID={`hb-${role.Abbr}-${rowIndex}-${index}`} rowIndex={undefined}          />      
+            storageID={`hb-${role.Abbr}-${rowIndex}-${index}`}         />      
         </li>
       ))}
     </ol>

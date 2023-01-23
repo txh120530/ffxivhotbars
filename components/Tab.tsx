@@ -1,9 +1,14 @@
-import React, {useState} from 'react';
+import React, {DetailedHTMLProps, HTMLAttributes, useState} from 'react';
 
 import styles from './Tabs.module.css'
 
+type TabProps = {
+  activeTab: any;
+  label: HTMLDivElement;
+  onClick: Function;
+}
 
-const Tab = ({activeTab, label, onClick}) => {
+const Tab = ({activeTab, label, onClick}:TabProps) => {
     
 
     const handleClick = () => {

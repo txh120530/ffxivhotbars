@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import Job from './Job/Job';
 import Tooltip from './Tooltip'
 import { useRole } from "../store/RoleContext";
@@ -45,9 +44,5 @@ const JobList = ({ title, jobs }) => {
   );
 }
 
-JobList.propTypes = {
-  title: PropTypes.string.isRequired,
-  jobs: PropTypes.arrayOf(PropTypes.shape()).isRequired
-};
 
 export default JobList;

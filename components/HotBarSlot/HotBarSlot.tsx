@@ -33,9 +33,10 @@ const HotBarSlot = ({id, index, modifier, storageID, role}) => {
     localStorage.removeItem(storageID)
 
   }
+  
 
 
-  const addAction = (item, action) => {
+  const addAction = (item: {type: string, action: string}, action: { ID: string; Icon: string; Name: string; Abbr: string; }) => {
     const filledAction = <Action action={action} type={item.type} removeAction={removeAction} />
     setActionChild(filledAction);
   }
@@ -72,7 +73,7 @@ const HotBarSlot = ({id, index, modifier, storageID, role}) => {
 
   const [{isOver}, drop] = useDrop(() => ({
     accept: [ItemTypes.ACTION, ItemTypes.HOTBARACTION],
-    drop: (item) => addAction(item, item.action),
+    drop: (item: {type: string, action: any}) => addAction(item, item.action),
     collect: (monitor) =>({
       isOver: !!monitor.isOver(),
   })

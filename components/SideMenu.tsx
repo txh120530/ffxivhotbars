@@ -8,11 +8,11 @@ import { ItemTypes } from './ItemTypes'
 const SideMenu = ({jobActions, generalActions}) => {
 
     return (
-    <Tabs>
-        <div label="Job Actions" preopenTab="1">
+    <Tabs children={undefined} label={undefined}>
+        <div label="Job Actions">
         {jobActions.map(function(jobAction, i){
             return (
-                <Action action={jobAction} key={`job-action-${i}`} type="Action" />
+                <Action action={jobAction} key={`job-action-${i}`} type="Action" removeAction={undefined} />
             )
         })}
         </div>

@@ -3,8 +3,13 @@ import React, {useState} from 'react';
 import Tab from './Tab';
 import styles from './Tabs.module.css'
 
+type TabsProps = {
+  children: any;
+  label: any;
 
-const Tabs = ({children}) => {
+}
+
+const Tabs = ({children}: TabsProps) => {
     const [activeTab, setActiveTab] = useState();
 
     const handleClick = (tab) => {

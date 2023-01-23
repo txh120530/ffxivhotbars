@@ -1,7 +1,6 @@
 import {useState} from 'react'
 import Select from 'react-select'
 
-import PropTypes from 'prop-types';
 import JobsList from './JobList';
 
 
@@ -30,7 +29,7 @@ const JobMenu = ({jobs}) => {
     const List = () => {
         if(filterType == 'discipline'){
             return(
-            <ul className="flex p-6 flex-wrap" labeledby="jobSelectTitle">
+            <ul className="flex p-6 flex-wrap" aria-labelledby="jobSelectTitle">
                 <li className="w-full md:w-1/4 pr-1">
                 <JobsList title="DoW" jobs={DoW} />
                 </li>
@@ -49,7 +48,7 @@ const JobMenu = ({jobs}) => {
 
         if(filterType == 'role'){
             return(
-            <ul className="flex p-6 flex-wrap" labeledby="jobSelectTitle">
+            <ul className="flex p-6 flex-wrap" aria-labelledby="jobSelectTitle">
                 
                 <li className="w-full md:w-1/4 pr-1">
                 <JobsList title="TANK" jobs={Tank} />
@@ -91,10 +90,6 @@ const JobMenu = ({jobs}) => {
     );
 };
 
-
-JobMenu.propTypes = {
-    jobs: PropTypes.arrayOf(PropTypes.shape()).isRequired
-  };
   
 
 export default JobMenu;

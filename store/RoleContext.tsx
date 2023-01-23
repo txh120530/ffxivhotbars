@@ -1,11 +1,17 @@
-import {useState, createContext, useContext, useEffect } from 'react'
+import {useState, createContext, useContext, useEffect, ReactNode } from 'react'
 
 type roleContextType = {
-    role: object | null;
+    role: {
+      ID: string,
+      Name: string,
+      Abbr: string
+    };
+    setRole: Function;
 };
 
 const roleContextDefaultValues: roleContextType = {
-    role: null,
+  role: null,
+  setRole: undefined
 };
 
 const RoleContext = createContext<roleContextType>(roleContextDefaultValues);
@@ -17,6 +23,8 @@ const RoleContext = createContext<roleContextType>(roleContextDefaultValues);
 type Props = {
     children: ReactNode;
 };
+
+
 
 export function RoleProvider({ children }: Props) {
     const initialState = {};

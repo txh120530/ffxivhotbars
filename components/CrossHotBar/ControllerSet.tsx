@@ -18,7 +18,7 @@ function ControllerSet({ slots, role, modifier, rowIndex, groupIndex, setIndex }
               id={slot.id}
               key={`slot-${slot.id}`}
               modifier={modifier}
-              storageID={`chb-${role.Abbr}-${rowIndex}-${groupIndex}-${setIndex}-${index}`} rowIndex={undefined} index={undefined} role={undefined}
+              storageID={`chb-${role.Abbr}-${rowIndex}-${groupIndex}-${setIndex}-${index}`} index={undefined} role={undefined}
         />
       ))}
     </div>
