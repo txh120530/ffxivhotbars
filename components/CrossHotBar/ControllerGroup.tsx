@@ -3,7 +3,6 @@ import ControllerSet from './ControllerSet';
 interface ControllerGroupProps {
   slots: any;
   id: any;
-  index: any;
   role: any;
   modifier: any;
   rowIndex: any;
@@ -17,7 +16,7 @@ const group = (array, size) => {
   };
   
 
-function ControllerGroup({ slots, id, index, role, modifier, rowIndex, groupIndex }: ControllerGroupProps) {
+function ControllerGroup({ slots, id, role, modifier, rowIndex, groupIndex }: ControllerGroupProps) {
   const slotSets = group(slots, 4);
 
   console.log("Group Index: ", groupIndex)
