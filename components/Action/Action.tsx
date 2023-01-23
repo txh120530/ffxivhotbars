@@ -10,9 +10,8 @@ import parse from 'html-react-parser';
 import styles from './Action.module.css'
 
 interface Props {
-    action: any,
+    action: unknown,
     type: string,
-
     removeAction: any
 
 }

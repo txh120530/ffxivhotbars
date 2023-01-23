@@ -8,7 +8,7 @@ import styles from './HotbarSlot.module.css'
 
 
 
-const HotBarSlot = ({id, rowIndex, index, modifier, storageID, role}) => {
+const HotBarSlot = ({id, index, modifier, storageID, role}) => {
   const [actionChild, setActionChild] = useState(null);
   const indexNum = {
     "0": "1",
