@@ -6,4 +6,6 @@ module.exports = {
   images: {
     unoptimized: true,
   },
+  use: ['style-loader', 'css-loader', 'sass-loader'],
+
 }
