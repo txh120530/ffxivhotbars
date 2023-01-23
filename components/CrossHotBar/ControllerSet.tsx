@@ -1,9 +1,17 @@
 import HotBarSlot from '../HotBarSlot/HotBarSlot';
 import styles from './ControllerSet.module.css'
 
+interface ControllerSetProps {
+    slots: any;
+    id: any;
+    index: any;
+    role: any;
+    modifier: any;
+    rowIndex: any;
+    groupIndex: any;
+}
 
-
-function ControllerSet({ slots, id, index, role, modifier, rowIndex, groupIndex, setIndex }) {
+function ControllerSet({ slots, id, index, role, modifier, rowIndex, groupIndex, setIndex }: ControllerSetProps) {
     console.log("Set Index: ", setIndex)
     return (
     <div  className={styles.slot}>
