@@ -72,7 +72,7 @@ const Action= ({action, type, removeAction}:Props) => {
             key={action.ID} 
             onDrag={removeAction} 
             onMouseOver={handleMouseOver}>
-                <Tooltip text={toolTipContent(actionInfo)} delay=".5">
+                <Tooltip text={toolTipContent(actionInfo)} bg={null} delay=".5">
                 <img 
                     src={`https://xivapi.com/${action.Icon}`}
                 />

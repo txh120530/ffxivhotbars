@@ -33,7 +33,7 @@ const JobList = ({ title, jobs }) => {
       <ul>
         {jobs.map((job) => (
           <li key={job.Name} value={job.ID}>
-            <Tooltip text={toolTipContent(job)} delay=".5" placement="right">
+            <Tooltip text={toolTipContent(job)} bg={null} delay=".5" placement="right">
             <button className="w-full" onClick={e => {handleClick(job)}}>
               <Job job={job} />
             </button>

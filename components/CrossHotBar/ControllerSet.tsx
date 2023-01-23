@@ -11,7 +11,6 @@ function ControllerSet({ slots, id, index, role, modifier, rowIndex, groupIndex,
         <HotBarSlot
           id={slot.id}
           key={`slot-${slot.id}`}
-          action={slot.action}
           modifier={modifier}
           storageID={`chb-${role.Abbr}-${rowIndex}-${groupIndex}-${setIndex}-${index}`}
 
