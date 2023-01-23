@@ -9,6 +9,7 @@ interface ControllerSetProps {
     modifier: any;
     rowIndex: any;
     groupIndex: any;
+    setIndex: any;
 }
 
 function ControllerSet({ slots, id, index, role, modifier, rowIndex, groupIndex, setIndex }: ControllerSetProps) {
