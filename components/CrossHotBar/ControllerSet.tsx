@@ -3,8 +3,6 @@ import styles from './ControllerSet.module.css'
 
 interface ControllerSetProps {
     slots: any;
-    id: any;
-    index: any;
     role: any;
     modifier: any;
     rowIndex: any;
@@ -12,17 +10,15 @@ interface ControllerSetProps {
     setIndex: any;
 }
 
-function ControllerSet({ slots, id, index, role, modifier, rowIndex, groupIndex, setIndex }: ControllerSetProps) {
-    console.log("Set Index: ", setIndex)
+function ControllerSet({ slots, role, modifier, rowIndex, groupIndex, setIndex }: ControllerSetProps) {
     return (
     <div  className={styles.slot}>
       { slots.map((slot, index) => (
         <HotBarSlot
-          id={slot.id}
-          key={`slot-${slot.id}`}
-          modifier={modifier}
-          storageID={`chb-${role.Abbr}-${rowIndex}-${groupIndex}-${setIndex}-${index}`}
-
+              id={slot.id}
+              key={`slot-${slot.id}`}
+              modifier={modifier}
+              storageID={`chb-${role.Abbr}-${rowIndex}-${groupIndex}-${setIndex}-${index}`} rowIndex={undefined} index={undefined} role={undefined}
         />
       ))}
     </div>

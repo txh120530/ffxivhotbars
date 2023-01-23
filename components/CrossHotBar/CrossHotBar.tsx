@@ -35,13 +35,12 @@ const Row = ({slots, index, role}) => {
       {Object.keys(controllerGroups).map((slots, index) => (
         <div className={`${styles.controllerSlots} ${slots}`} key={`group-${index}`}>
           <ControllerGroup 
-          slots={controllerGroups[slots]}
-          id={slots[index].id}
-          groupIndex={index}  
-          rowIndex={rowIndex}
-          role={role}
-          modifier={null}
-          />
+            slots={controllerGroups[slots]}
+            id={slots[index].id}
+            groupIndex={index}
+            rowIndex={rowIndex}
+            role={role}
+            modifier={null} index={undefined}          />
         </div>
       ))}
     </ol>

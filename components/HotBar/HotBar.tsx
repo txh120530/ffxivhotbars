@@ -50,10 +50,9 @@ const Row = ({slots, index, role}) => {
           <HotBarSlot
             id={slots[slot].id}
             index={index}
-            modifier={modifier}   
+            modifier={modifier}
             role={role}
-            storageID={`hb-${role.Abbr}-${rowIndex}-${index}`}
-          />      
+            storageID={`hb-${role.Abbr}-${rowIndex}-${index}`} rowIndex={undefined}          />      
         </li>
       ))}
     </ol>
