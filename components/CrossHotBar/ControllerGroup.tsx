@@ -9,9 +9,9 @@ interface ControllerGroupProps {
   groupIndex: any;
 }
 
-const group = (array, size) => {
+const group = (array: any[], size: number) => {
     const arr = [];
-    const newArray = [].concat.apply(arr, array.map((elem, i) => (i % size ? [] : [array.slice(i, i + size)])));
+    const newArray = [].concat.apply(arr, array.map((elem: any, i: number) => (i % size ? [] : [array.slice(i, i + size)])));
     return newArray;
   };
   
@@ -23,7 +23,7 @@ function ControllerGroup({ slots, id, role, modifier, rowIndex, groupIndex }: Co
   
   return (
     <>
-      {slotSets.map((groupSlots, index) => (
+      {slotSets.map((groupSlots: any, index: any) => (
         <ControllerSet 
         slots={groupSlots} 
         key={`set-${index}`}
