@@ -25,10 +25,8 @@ function ControllerGroup({ slots, id, role, modifier, rowIndex, groupIndex }: Co
     <>
       {slotSets.map((groupSlots: any, index: any) => (
         <ControllerSet 
-        slots={groupSlots} 
         key={`set-${index}`}
-        id={id}
-        index={index}
+        slots={groupSlots} 
         rowIndex={rowIndex}
         groupIndex={groupIndex}
         setIndex={index}
