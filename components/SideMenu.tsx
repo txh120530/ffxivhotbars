@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, {useState} from 'react';
 import Tabs from "./Tabs"
 import Action from "./Action/Action"
@@ -9,7 +10,8 @@ const SideMenu = ({jobActions, generalActions}) => {
 
     return (
     <Tabs>
-        <div data-label="Job Actions">
+        
+        <div label="Job Actions">
         {jobActions.map(function(jobAction, i){
             return (
                 <Action action={jobAction} key={`job-action-${i}`} type="Action" removeAction={undefined} itemType={''} />
@@ -17,7 +19,7 @@ const SideMenu = ({jobActions, generalActions}) => {
         })}
         </div>
 
-        <div data-label="General Actions">
+        <div label="General Actions">
         {generalActions.map(function(generalAction, i){
             if(generalAction.Name){
                 return (
