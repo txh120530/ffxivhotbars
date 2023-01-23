@@ -1,12 +1,8 @@
-import {useState, createContext, useContext, useEffect, ReactNode } from 'react'
+import {useState, createContext, useContext, useEffect, ReactNode, SetStateAction } from 'react'
 
 type roleContextType = {
-    role: {
-      ID: string,
-      Name: string,
-      Abbr: string
-    };
-    setRole: Function;
+    role: any;
+    setRole: any;
 };
 
 const roleContextDefaultValues: roleContextType = {

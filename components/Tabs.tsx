@@ -5,8 +5,6 @@ import styles from './Tabs.module.css'
 
 type TabsProps = {
   children: any;
-  label: any;
-
 }
 
 const Tabs = ({children}: TabsProps) => {

@@ -13,7 +13,7 @@ interface Props {
     action: {ID: string, Icon: string, Name: string, Abbr: string},
     type: string,
     removeAction: any
-
+    itemType: string
 }
 
 

@@ -37,7 +37,7 @@ const HotBarSlot = ({id, index, modifier, storageID, role}) => {
 
 
   const addAction = (item: {type: string, action: string}, action: { ID: string; Icon: string; Name: string; Abbr: string; }) => {
-    const filledAction = <Action action={action} type={item.type} removeAction={removeAction} />
+    const filledAction = <Action action={action} type={item.type} removeAction={removeAction} itemType={''} />
     setActionChild(filledAction);
   }
 
@@ -52,7 +52,7 @@ const HotBarSlot = ({id, index, modifier, storageID, role}) => {
 
       const slotData = JSON.parse(localStorage.getItem(storageID));
       if (slotData) {
-        const filledAction = <Action action={slotData.props.action} type={slotData.props.type} removeAction={removeAction} />
+        const filledAction = <Action action={slotData.props.action} type={slotData.props.type} removeAction={removeAction} itemType={''} />
         setActionChild(filledAction);
       }
     }

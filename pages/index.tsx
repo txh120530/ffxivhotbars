@@ -4,7 +4,6 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 
-import { jobTypes } from 'data/jobtypes';
 import Jobs from '../data/JobData.json';
 import { useRole } from "../store/RoleContext";
 
