@@ -36,7 +36,7 @@ const Row = ({slots, index, role}) => {
         <div className={`${styles.controllerSlots} ${slots}`} key={`group-${index}`}>
           <ControllerGroup 
             slots={controllerGroups[slots]}
-            id={slots[index].id}
+            id={slots[index]}
             groupIndex={index}
             rowIndex={rowIndex}
             role={role}
