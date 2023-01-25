@@ -5,7 +5,6 @@ import Select from 'react-select'
 
 
 import HotBarSlot from '../HotBarSlot/HotBarSlot';
-import { ItemTypes } from '../ItemTypes'
 
 
 import {hotbar} from '../../data/hotbars'
@@ -52,6 +51,7 @@ const Row = ({slots, index, role}) => {
             index={index}
             modifier={modifier}
             role={role}
+            keyboardSlot={true}
             storageID={`hb-${role.Abbr}-${rowIndex}-${index}`}         />      
         </li>
       ))}

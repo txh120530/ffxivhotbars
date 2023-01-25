@@ -18,6 +18,7 @@ function ControllerSet({ slots, role, modifier, rowIndex, groupIndex, setIndex }
               id={slot.id}
               key={`slot-${slot.id}`}
               modifier={modifier}
+              keyboardSlot={false}
               storageID={`chb-${role.Abbr}-${rowIndex}-${groupIndex}-${setIndex}-${index}`} index={undefined} role={undefined}
         />
       ))}

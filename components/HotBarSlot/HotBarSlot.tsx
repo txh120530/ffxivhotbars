@@ -8,7 +8,7 @@ import styles from './HotbarSlot.module.css'
 
 
 
-const HotBarSlot = ({id, index, modifier, storageID, role}) => {
+const HotBarSlot = ({id, index, modifier, storageID, role, keyboardSlot}) => {
   const [actionChild, setActionChild] = useState(null);
   const indexNum = {
     "0": "1",
@@ -79,12 +79,13 @@ const HotBarSlot = ({id, index, modifier, storageID, role}) => {
   })
   }))
 
-  const HotBarNum = ({modifier, index}) => {
-    var modifierText = "";
-    if(modifier !== null){
-        modifierText = modifierText + modifier.value;
-    } else {
+  const HotBarNum = ({modifier, index, keyboardSlot}) => {
+    if(!keyboardSlot){
       return null;
+    }
+    var modifierText = "";
+    if(modifier){
+        modifierText = modifierText + modifier.value;
     }
 
     return (
@@ -116,7 +117,7 @@ const HotBarSlot = ({id, index, modifier, storageID, role}) => {
             ref={drop}
           >
             {actionChild}
-            <HotBarNum modifier={modifier} index={index} />
+            <HotBarNum modifier={modifier} index={index} keyboardSlot={keyboardSlot} />
           </div>
       );
     }
