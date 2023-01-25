@@ -1,7 +1,8 @@
 import {useState} from 'react'
-import Select from 'react-select'
 
 import JobsList from './JobList';
+
+import styles from './JobMenu.module.css';
 
 
 import React from 'react';
@@ -78,12 +79,15 @@ const JobMenu = ({jobs}) => {
 
     return (
         <div className="window-shadow">
-            
-    <label htmlFor="filterSelect">Change Sort Type</label>
-    <select onChange={handleChange}  id="filterSelect">
-        <option value="discipline">Sort by Discipline</option>
-        <option value="role">Sort by Role</option>
-      </select>
+
+      <div className={styles.slantBtnContainer}>
+                <button value={"discipline"} onClick={e => handleChange(e)} className={`${styles.slantBtn} ${filterType =="discipline" ? `${styles.active}` : ""}`}>
+                    <div>Sort by Discipline</div>
+                </button>
+                <button value={"role"} onClick={e => handleChange(e)} className={`${styles.slantBtn} ${filterType =="role" ? `${styles.active}` : ""}`}>
+                    <div>Sort by Role</div>
+                </button>
+            </div>
         <List />
 
         </div>
