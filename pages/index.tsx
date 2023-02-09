@@ -18,13 +18,6 @@ export default function Home({jobs}) {
 
   
 
-  const RoleSelected = () => {
-    return(
-      <>
-        Role Selected: {role.Name}
-      </>
-    )
-  }
 
 
   return (
@@ -38,7 +31,6 @@ export default function Home({jobs}) {
       
       <main className="container mx-auto my-12">
         <div>
-        <h2>{role ? <RoleSelected /> : "No Job Selected"}</h2>
           
         <JobMenu jobs={Jobs}/>
 

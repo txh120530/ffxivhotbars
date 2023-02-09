@@ -16,7 +16,7 @@ const Tabs = ({children}: TabsProps) => {
 
 
     return (
-        <div className={`${styles.tabs} window-shadow`}>
+        <div>
         <ol className="tab-list switch-container">
           {children.map((child) => {
             const { label, preopenTab } = child.props;

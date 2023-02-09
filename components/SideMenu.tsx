@@ -2,13 +2,19 @@
 import React, {useState} from 'react';
 import Tabs from "./Tabs"
 import Action from "./Action/Action"
+import RoleSelected from './RoleSelected';
 
 import { ItemTypes } from './ItemTypes'
 
+import styles from './SideMenu.module.css'
 
-const SideMenu = ({jobActions, generalActions}) => {
+
+const SideMenu = ({role, jobActions, generalActions}) => {
 
     return (
+        <div  className={`${styles.tabs} window-shadow`}>
+        <h2>{role ? <RoleSelected role={role} /> : "No Job Selected"}</h2>
+
     <Tabs>
         
         <div label="Job Actions">
@@ -30,6 +36,7 @@ const SideMenu = ({jobActions, generalActions}) => {
         </div>
 
     </Tabs>
+    </div>
     );
 };
 

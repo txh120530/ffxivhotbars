@@ -1,0 +1,14 @@
+
+@media (min-width: 768px){
+    .tabs{
+        position: sticky;
+        z-index: 1000;
+    }
+    }
+    
+    @media (min-width: 1024px){
+        .tabs{
+    
+            max-width: 600px;
+        }
+    }

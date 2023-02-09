@@ -41,7 +41,7 @@ const MainContent = ({role}) => {
         <DndProvider backend={HTML5Backend}>
         <section className="block lg:flex justify-between relative">
             <div className="w-full lg:w-3/12 lg:mr-4 md:sticky top-0 left-0 self-start z-50 bg-tan">
-            <SideMenu jobActions={jobActions} generalActions={generalActions} />
+            <SideMenu role={role} jobActions={jobActions} generalActions={generalActions} />
             </div>
             <div className="window-shadow w-full lg:w-8/12">
             <HotBarMaker role={role} />
